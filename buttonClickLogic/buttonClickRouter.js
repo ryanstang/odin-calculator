@@ -1,11 +1,27 @@
+import {processNumClick} from './buttonClickService.js'
+
 
 // add onClick to each button
 function addButtonClickRouter () {
+    const colDiv = document.getElementsByClassName("col");
 
+    Array.from(colDiv).forEach(col => {
+        const buttonDiv = document.getElementsByName("button");
+        buttonDiv.forEach (button => {
+            button.onclick = routeButtonBasedOnContent(this);
+        })
+    });
 }
 
 // route button click based on content in button
-function routeButtonBasedOnContent () {
+function routeButtonBasedOnContent (button) {
+    const buttonContent = button.textContent;
+
+    console.log(typeof buttonContent);
+
+    switch (buttonContent) {
+        // case 
+    }
     /*
     if num is click 
         update calculator display
