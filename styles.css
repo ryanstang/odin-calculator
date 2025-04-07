@@ -1,0 +1,33 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#calculatorBody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#display {
+    border: 2px solid black;
+    align-self: stretch;
+    text-align: right;
+}
+
+.buttons {
+    display: flex;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+#equalSign {
+    flex-grow: 1;
+}
