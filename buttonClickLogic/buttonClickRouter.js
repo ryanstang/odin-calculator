@@ -6,21 +6,21 @@ function addButtonClickRouter () {
     const colDiv = document.getElementsByClassName("col");
 
     Array.from(colDiv).forEach(col => {
-        const buttonDiv = document.getElementsByName("button");
-        buttonDiv.forEach (button => {
-            button.onclick = routeButtonBasedOnContent(this);
+        const buttonDiv = col.getElementsByTagName("button");
+        Array.from(buttonDiv).forEach (button => {
+            button.addEventListener('click', (e) => {routeButtonBasedOnContent(e)});
         })
     });
 }
 
 // route button click based on content in button
 function routeButtonBasedOnContent (button) {
-    const buttonContent = button.textContent;
+    const buttonContent = button.target.textContent; //string
 
-    console.log(typeof buttonContent);
-
-    switch (buttonContent) {
-        // case 
+    console.log(!isNaN(buttonContent));
+    
+    if (!isNaN(buttonContent)) {
+        processNumClick(buttonContent);
     }
     /*
     if num is click 
