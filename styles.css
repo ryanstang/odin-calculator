@@ -1,4 +1,5 @@
 body {
+    transform: scale(2);
     width: 100vw;
     height: 100vh;
     margin: 0;
@@ -14,6 +15,7 @@ body {
     border: 2px solid black;
     align-self: center;
     padding: 10px;
+    background-color: lightcyan;
 }
 
 #display {
@@ -22,6 +24,7 @@ body {
     text-align: right;
     margin-bottom: 5px;
     padding: 3px;
+    background-color: white;
 }
 
 #buttons {

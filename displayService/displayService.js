@@ -1,7 +1,7 @@
 export function addToDisplay(newContent, prevClick) {
     const displayDiv = document.getElementById("display"); //string
 
-    if (displayDiv.textContent === "0" || ['+', '-', '/', 'x'].includes(prevClick)) {
+    if (displayDiv.textContent === "0" || ['+', '-', '/', 'x', '='].includes(prevClick)) {
         displayDiv.textContent = newContent;
     } else {
         displayDiv.textContent += newContent;

@@ -3,6 +3,11 @@ import calculation from '../calculation/calculation.js';
 
 export function processNumClick (num) {
     displayService.addToDisplay(num, prevClick);
+
+    // if user starts new equation
+    if (prevClick === '=') {
+        resetVariables();
+    }
 }
 
 export function processCClick () {
