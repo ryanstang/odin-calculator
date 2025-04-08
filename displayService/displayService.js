@@ -32,6 +32,14 @@ export function removeFromDisplay() {
     } else {
         displayDiv.textContent = curString.slice(0,-1);
     }
-    
+}
 
+export function addDecimalDisplay() {
+    const displayDiv = document.getElementById("display"); //string
+    let curString = displayDiv.textContent;
+
+    // check if current number is a sigle digit
+    if (!curString.includes('.')) {
+        displayDiv.textContent += '.';
+    }
 }

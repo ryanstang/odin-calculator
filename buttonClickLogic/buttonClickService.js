@@ -17,6 +17,10 @@ export function processBackArrowClick() {
     displayService.removeFromDisplay();
 }
 
+export function processDotClick() {
+    displayService.addDecimalDisplay();
+}
+
 export function resetVariables() {
     currentTotal = null;
     currentNumber = null;

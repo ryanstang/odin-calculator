@@ -25,6 +25,8 @@ function routeButtonBasedOnContent (button) {
         buttonClickService.processPlusMinusClick();
     } else if (buttonContent === '->') {
         buttonClickService.processBackArrowClick();
+    } else if (buttonContent === '.') {
+        buttonClickService.processDotClick();
     }
     /*
     if operator(+, -, x, /) is clicked
@@ -36,9 +38,6 @@ function routeButtonBasedOnContent (button) {
             save display to currentTotal
             save operator
             clear display
-    if -> is clicked 
-        delete last number 
-            if 1 digit, make display 0
     if = is clicked
        calculate currentTotal, currentNumber, operator 
     if . is clicked
