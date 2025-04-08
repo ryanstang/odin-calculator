@@ -24,7 +24,7 @@ body {
     padding: 3px;
 }
 
-.buttons {
+#buttons {
     display: flex;
     gap: 5px;
 }
@@ -38,3 +38,9 @@ body {
 #equalSign {
     flex-grow: 1;
 }
+
+button.selected {
+    background-color: #007bff;
+    color: white;
+    border-color: #0056b3;
+  }

@@ -9,8 +9,25 @@ function addButtonClickRouter () {
         const buttonDiv = col.getElementsByTagName("button");
         Array.from(buttonDiv).forEach (button => {
             button.addEventListener('click', (e) => {routeButtonBasedOnContent(e)});
+            button.addEventListener('click', (e) => {highlightOperatorButton(e)});
         })
     });
+}
+
+function highlightOperatorButton() {
+    const buttons = document.getElementById('buttons');
+    let prevSelectedButton = null;
+
+    buttons.addEventListener('click', (e) => {
+        if (prevSelectedButton) {
+            prevSelectedButton.classList.remove('selected');
+        }
+
+        if (['+', '-', '/', 'x'].includes(e.target.textContent)) {
+            e.target.classList.add('selected');
+            prevSelectedButton = e.target;
+        }
+});
 }
 
 // route button click based on content in button
@@ -34,19 +51,6 @@ function routeButtonBasedOnContent (button) {
     }
 
     buttonClickService.updatePrevClick(buttonContent);
-    /*
-    if operator(+, -, x, /) is clicked
-        if prevClick is operator
-            replace operator if different
-        if currentTotal is already saved and prev is not =
-            calculate currentTotal, currentNumber, operator
-        else
-            save display to currentTotal
-            save operator
-            clear display
-    if = is clicked
-       calculate currentTotal, currentNumber, operator 
-    */
 }
 
 addButtonClickRouter();

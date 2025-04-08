@@ -2,7 +2,7 @@ import * as displayService from '../displayService/displayService.js';
 import calculation from '../calculation/calculation.js';
 
 export function processNumClick (num) {
-    displayService.addToDisplay(num);
+    displayService.addToDisplay(num, prevClick);
 }
 
 export function processCClick () {
@@ -33,7 +33,6 @@ export function processOperatorClick(opt) {
    } else {
         currentTotal = displayNumber;
         operator = opt;
-        displayService.resetDisplay();
    }
 }
 
