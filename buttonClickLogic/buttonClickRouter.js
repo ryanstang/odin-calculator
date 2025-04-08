@@ -21,6 +21,8 @@ function routeButtonBasedOnContent (button) {
         buttonClickService.processNumClick(buttonContent);
     } else if (buttonContent === 'C') {
         buttonClickService.processCClick();
+    } else if (buttonContent === '+/-') {
+        buttonClickService.processPlusMinusClick();
     }
     /*
     if operator(+, -, x, /) is clicked
@@ -34,8 +36,6 @@ function routeButtonBasedOnContent (button) {
             clear display
     if +/- is clicked
         change display to plus/minus (unless it is 0, dont chage)
-    if C is clicked 
-        clear every variable and display
     if -> is clicked 
         delete last number 
             if 1 digit, make display 0

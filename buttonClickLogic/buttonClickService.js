@@ -9,6 +9,10 @@ export function processCClick () {
     resetVariables();
 }
 
+export function processPlusMinusClick() {
+    displayService.plusMinusDisplay();
+}
+
 export function resetVariables() {
     currentTotal = null;
     currentNumber = null;
