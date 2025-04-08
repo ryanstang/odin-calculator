@@ -21,3 +21,17 @@ export function plusMinusDisplay() {
         displayDiv.textContent = String(number);
     } 
 }
+
+export function removeFromDisplay() {
+    const displayDiv = document.getElementById("display"); //string
+    let curString = displayDiv.textContent;
+
+    // check if current number is a sigle digit
+    if (curString.replace(/^[-]+|[-]+$/g, '').length === 1) {
+        displayDiv.textContent = '0';
+    } else {
+        displayDiv.textContent = curString.slice(0,-1);
+    }
+    
+
+}

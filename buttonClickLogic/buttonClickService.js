@@ -13,6 +13,10 @@ export function processPlusMinusClick() {
     displayService.plusMinusDisplay();
 }
 
+export function processBackArrowClick() {
+    displayService.removeFromDisplay();
+}
+
 export function resetVariables() {
     currentTotal = null;
     currentNumber = null;

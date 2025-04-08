@@ -23,6 +23,8 @@ function routeButtonBasedOnContent (button) {
         buttonClickService.processCClick();
     } else if (buttonContent === '+/-') {
         buttonClickService.processPlusMinusClick();
+    } else if (buttonContent === '->') {
+        buttonClickService.processBackArrowClick();
     }
     /*
     if operator(+, -, x, /) is clicked
@@ -34,8 +36,6 @@ function routeButtonBasedOnContent (button) {
             save display to currentTotal
             save operator
             clear display
-    if +/- is clicked
-        change display to plus/minus (unless it is 0, dont chage)
     if -> is clicked 
         delete last number 
             if 1 digit, make display 0
