@@ -7,3 +7,8 @@ export function addToDisplay(newContent) {
         displayDiv.textContent += newContent;
     }
 }
+
+export function resetDisplay() {
+    const displayDiv = document.getElementById("display");
+    displayDiv.textContent = '0';
+}

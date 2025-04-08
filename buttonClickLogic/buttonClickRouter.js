@@ -1,4 +1,4 @@
-import {processNumClick} from './buttonClickService.js'
+import * as buttonClickService from './buttonClickService.js'
 
 
 // add onClick to each button
@@ -16,15 +16,13 @@ function addButtonClickRouter () {
 // route button click based on content in button
 function routeButtonBasedOnContent (button) {
     const buttonContent = button.target.textContent; //string
-
-    console.log(!isNaN(buttonContent));
     
     if (!isNaN(buttonContent)) {
-        processNumClick(buttonContent);
+        buttonClickService.processNumClick(buttonContent);
+    } else if (buttonContent === 'C') {
+        buttonClickService.processCClick();
     }
     /*
-    if num is click 
-        update calculator display
     if operator(+, -, x, /) is clicked
         if prevClick is operator
             replace operator if different
@@ -49,8 +47,4 @@ function routeButtonBasedOnContent (button) {
     */
 }
 
-let currentTotal;
-let currentNumber;
-let prevClick;
-let operator;
 addButtonClickRouter();
