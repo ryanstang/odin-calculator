@@ -43,3 +43,8 @@ export function addDecimalDisplay() {
         displayDiv.textContent += '.';
     }
 }
+
+export function showTotalDisplay(num) {
+    const displayDiv = document.getElementById("display");
+    displayDiv.textContent = String(num);
+}

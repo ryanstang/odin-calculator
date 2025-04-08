@@ -27,7 +27,13 @@ function routeButtonBasedOnContent (button) {
         buttonClickService.processBackArrowClick();
     } else if (buttonContent === '.') {
         buttonClickService.processDotClick();
+    } else if (['+', '-', '/', 'x'].includes(buttonContent)) {
+        buttonClickService.processOperatorClick(buttonContent);
+    } else { // = sign
+        buttonClickService.processEqualClick();
     }
+
+    buttonClickService.updatePrevClick(buttonContent);
     /*
     if operator(+, -, x, /) is clicked
         if prevClick is operator
@@ -40,9 +46,6 @@ function routeButtonBasedOnContent (button) {
             clear display
     if = is clicked
        calculate currentTotal, currentNumber, operator 
-    if . is clicked
-        if not already a dot in display
-            add a dot
     */
 }
 
